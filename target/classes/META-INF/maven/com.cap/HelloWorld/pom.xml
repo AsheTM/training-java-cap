@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apaache.org/xsd/maven-4.0.0.xsd">
+    
+    <modelVersion>4.0.0</modelVersion>
+    
+    <groupId> com.cap </groupId>
+    <artifactId>HelloWorld</artifactId>
+    <version> 0.0.1-SNAPSHOT </version><!-- SNAPSHOT = Not a final version -->
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.9.RELEASE</version>
+    </parent>
+
+    <!-- Des lignes supplémentaires à ajouter ici -->
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
+    
+    <build>
+    	<plugins>
+    		<plugin> <!-- Without this plugin, we will run the app with "mvn spring-boot:run" -->
+    			<groupId>org.springframework.boot</groupId>
+    			<artifactId>spring-boot-maven-plugin</artifactId>
+    		</plugin><!-- With this plugin, we can now launch the app as a JAVA app with "java -jar target/XXX.jar" -->
+    	</plugins><!-- Plugin + ":" + Goal -->
+    </build>
+    
+</project>
